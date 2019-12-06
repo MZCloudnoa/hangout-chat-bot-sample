@@ -1,0 +1,17 @@
+{
+  "type": "ADDED_TO_SPACE",
+  "eventTime": "2019-11-08T10:19:59.443943Z",
+  "user": {
+    "name": "users/100450491628538316547",
+    "displayName": "박인규",
+    "avatarUrl": "https://lh3.googleusercontent.com/a-/AAuE7mAdsuNSzznAlN-WtuflndoFiT_nzNw86JLOITmF",
+    "email": "inkyupark@mz.co.kr",
+    "type": "HUMAN"
+  },
+  "space": {
+    "name": "spaces/AAAAoHr89ik",
+    "type": "ROOM",
+    "displayName": "테스트",
+    "threaded": true
+  }
+}

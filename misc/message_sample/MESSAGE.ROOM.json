@@ -1,0 +1,57 @@
+{
+  "type": "MESSAGE",
+  "eventTime": "2019-11-08T10:22:32.986511Z",
+  "message": {
+    "name": "spaces/AAAAoHr89ik/messages/hBdBY4gqQx8.MEZ60oFmlSI",
+    "sender": {
+      "name": "users/100450491628538316547",
+      "displayName": "박인규",
+      "avatarUrl": "https://lh3.googleusercontent.com/a-/AAuE7mAdsuNSzznAlN-WtuflndoFiT_nzNw86JLOITmF",
+      "email": "inkyupark@mz.co.kr",
+      "type": "HUMAN"
+    },
+    "createTime": "2019-11-08T10:22:32.986511Z",
+    "text": "@SampleBot asdasd",
+    "annotations": [{
+      "type": "USER_MENTION",
+      "startIndex": 0,
+      "length": 10,
+      "userMention": {
+        "user": {
+          "name": "users/109626208454790122265",
+          "displayName": "SampleBot",
+          "avatarUrl": "https://lh6.googleusercontent.com/proxy/Dmkqd1Qly-nEJqlU6GkJzSIm_A8-5eaq5ph7L_Epd9ruyK7LEZdQu30NR-_31RigqhG4zEhtZlkUpkPZY29Y9yejXV_5bAw",
+          "type": "BOT"
+        },
+        "type": "MENTION"
+      }
+    }],
+    "thread": {
+      "name": "spaces/AAAAoHr89ik/threads/hBdBY4gqQx8",
+      "retentionSettings": {
+        "state": "PERMANENT"
+      }
+    },
+    "space": {
+      "name": "spaces/AAAAoHr89ik",
+      "type": "ROOM",
+      "displayName": "테스트",
+      "threaded": true
+    },
+    "argumentText": " asdasd"
+  },
+  "user": {
+    "name": "users/100450491628538316547",
+    "displayName": "박인규",
+    "avatarUrl": "https://lh3.googleusercontent.com/a-/AAuE7mAdsuNSzznAlN-WtuflndoFiT_nzNw86JLOITmF",
+    "email": "inkyupark@mz.co.kr",
+    "type": "HUMAN"
+  },
+  "space": {
+    "name": "spaces/AAAAoHr89ik",
+    "type": "ROOM",
+    "displayName": "테스트",
+    "threaded": true
+  },
+  "configCompleteRedirectUrl": "https://chat.google.com/api/bot_config_complete?token\\u003dAClqJQTYnI88UeOtATHiQDyhmmaVTKk1FLu7rAY17oJPuwaOlPi_ZIlE6Qi4UcpDaEVS_61Vs_RZHkeHbIf-ZwG54wCkmZargTtugGBzG57AuoQBzC816bNDSwdsfwndRuPtDMoJ1D3wK6Mrqrjg"
+}

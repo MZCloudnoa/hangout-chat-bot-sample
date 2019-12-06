@@ -1,0 +1,41 @@
+{
+  "type": "MESSAGE",
+  "eventTime": "2019-11-08T10:18:39.950943Z",
+  "message": {
+    "name": "spaces/-vl3cgAAAAE/messages/L7ncnmHVM0A.L7ncnmHVM0A",
+    "sender": {
+      "name": "users/100450491628538316547",
+      "displayName": "박인규",
+      "avatarUrl": "https://lh3.googleusercontent.com/a-/AAuE7mAdsuNSzznAlN-WtuflndoFiT_nzNw86JLOITmF",
+      "email": "inkyupark@mz.co.kr",
+      "type": "HUMAN"
+    },
+    "createTime": "2019-11-08T10:18:39.950943Z",
+    "text": "asdasd",
+    "thread": {
+      "name": "spaces/-vl3cgAAAAE/threads/L7ncnmHVM0A",
+      "retentionSettings": {
+        "state": "PERMANENT"
+      }
+    },
+    "space": {
+      "name": "spaces/-vl3cgAAAAE",
+      "type": "DM",
+      "singleUserBotDm": true
+    },
+    "argumentText": "asdasd"
+  },
+  "user": {
+    "name": "users/100450491628538316547",
+    "displayName": "박인규",
+    "avatarUrl": "https://lh3.googleusercontent.com/a-/AAuE7mAdsuNSzznAlN-WtuflndoFiT_nzNw86JLOITmF",
+    "email": "inkyupark@mz.co.kr",
+    "type": "HUMAN"
+  },
+  "space": {
+    "name": "spaces/-vl3cgAAAAE",
+    "type": "DM",
+    "singleUserBotDm": true
+  },
+  "configCompleteRedirectUrl": "https://chat.google.com/api/bot_config_complete?token\\u003dAClqJQT-Y5MaD2qyz2Jjrw5y_wOSLNI_Rmmg7luuVkQ6YqoQEp1JnupMmbo-TFky-qnZ93OcTZ1UF4-tbFJ9asZmx2ipthplbzkXOuxzlaxvmaUqWvh3njClFNlDuh0oFY7upvje8S0hEvkxN3wf"
+}
