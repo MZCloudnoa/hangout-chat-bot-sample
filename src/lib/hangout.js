@@ -57,21 +57,26 @@ const SCOPE_CHAT_BOT = 'https://www.googleapis.com/auth/chat.bot';
 
 // hangout chat을 초기화하고 메시지를 받을 수 있도록 구독한다.
 async function initialize(callbacks) {
-  debug('initialize');
-
   const options = _.merge({
     autoAck: true,
     ackOnSuccess: true,
   }, config.hangout.pubsub);
-  debug('options', JSON.stringify(options));
+
+  debug('initialize:', JSON.stringify(options));
 
   await pubsub.initialize(options, async data => {
     return await handlePubsub(data, callbacks);
   });
 }
 
-async function sendMessage(space, thread, message) {
-  debug('sendMessage', space, thread, message);
+async function sendMessage(notificationId, message) {
+  debug('sendMessage', notificationId, message);
+
+  const tokens = notificationId.split('/');
+  if (tokens.length !== 4 || tokens[0] !== 'spaces' || tokens[2] !== 'threads') {
+    console.error('invalid notification id:', notificationId);
+    return;
+  }
 
   // 여기서는 default credential 을 이용해 hangouts chat api를 호출합니다.
   // 서비스 환경에서는 GOOGLE_APPLICATION_CREDENTIALS 환경변수를 이용해서
@@ -80,14 +85,14 @@ async function sendMessage(space, thread, message) {
   const chat = google.chat({ version: 'v1', auth });
 
   const payload = {
-    parent: space,
+    parent: `${tokens[0]}/${tokens[1]}`,
     requestBody: {
       text: message,
     }
   };
 
-  if (thread) {
-    payload.requestBody.thread = { name: thread };
+  if (!tokens[1].startsWith('-')) {
+    payload.requestBody.thread = { name: notificationId };
   }
 
   return chat.spaces.messages.create(payload).catch(err => {

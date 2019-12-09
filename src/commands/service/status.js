@@ -9,6 +9,7 @@ module.exports = {
 
   options: [{
     name: 'all',
+    aliases: ['a'],
     description: '모든 서비스의 상태를 조회합니다. (서비스 이름 생략)',
     type: Boolean,
     default: false,

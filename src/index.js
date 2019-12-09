@@ -30,6 +30,8 @@ async function main() {
 async function handleHangoutMessage(data) {
   debug('handleHangoutMessage', data.message.argumentText);
 
+  // 형식: 'spaces/[룸ID]/threads/[쓰레드ID]'
+  // DM의 경우에도 위와 동일한 형태이며, 룸ID 가 '-'로 시작함
   const notificationId = data.message.thread.name;
 
   const output = await commands.execute(
@@ -39,10 +41,8 @@ async function handleHangoutMessage(data) {
   );
 
   if (output !== true) {
-    hangout.sendMessage(
-      data.message.space.name,
-      data.message.space.type !== 'DM' ? data.message.thread.name : null,
-      output);
+    // 직접 받은 메시지(에러 등)는 바로 사용자에게 보내준다.
+    hangout.sendMessage(notificationId, output);
   }
 
   return true;

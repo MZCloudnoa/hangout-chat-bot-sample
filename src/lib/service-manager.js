@@ -3,6 +3,8 @@ const config = require('@/config');
 const debug = require('debug')('lib:service-manager');
 
 // 서비스 관리 툴 시뮬레이터
+// 서비스 환경에서는 외부의 REST/gRPC 등의 API 를 호출하도록 해야함.
+// notify 부분을 각 서비스에서 구현하도록 해야함.
 
 const STATUS_STOPPED = 'stopped';
 const STATUS_STARTING = 'starting';

@@ -3,6 +3,7 @@ const utils = require('@/lib/utils');
 const debug = require('debug')('lib:pubsub');
 
 // pubsub을 초기화하고 메시지를 받을 수 있도록 구독한다.
+// subscribe의 경우에만 호출하고 단순히 메시지만 보내는 경우에는 필요 없다.
 async function initialize(options, callback) {
   utils.checkParameters([
     ['options', options],
@@ -64,6 +65,8 @@ async function initialize(options, callback) {
   });
 }
 
+// topic 이 존재하는지 체크는 따로 하지 않는다.
+// topic이 없으면 subscriber도 없으므로 생성할 필요도 없다.
 function publish(project, topic, message) {
   debug('publish:', project, topic, JSON.stringify(message));
 

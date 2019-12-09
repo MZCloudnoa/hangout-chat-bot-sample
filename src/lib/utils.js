@@ -65,6 +65,7 @@ function exitOnFileChange(files) {
   })
 }
 
+// 특정 시그널이 오면 서버를 종료한다.
 function exitOnSignal(signals) {
   signals = signals ? (Array.isArray(signals) ? signals : [signals]) : [];
 
@@ -75,8 +76,6 @@ function exitOnSignal(signals) {
     });
   });
 }
-
-// 종료 시그널이 오면 서버를 종료한다.
 
 module.exports = {
   watchFile,
